@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>clickLogo example</title>
+  </head>  
+  <body>
+    <div id="logo">Sitename</div>
+    <script>
+      (function () {
+        var logo;
+        if(location.protocol + '//' + location.host + '/' != location.href){
+          logo = document.getElementById('logo');
+        logo.setAttribute('onClick', 'document.location = \'' + location.protocol + '//' + location.host + '/\'');
+        }
+      }());
+    </script>
+  </body>
+</html>
